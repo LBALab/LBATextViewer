@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPublishable>True</IsPublishable>
+    <ApplicationIcon>Shrug.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <Compile Remove="JSON\**" />
+    <Compile Remove="LBA1TextDump\**" />
+    <Compile Remove="LBA2TextDump\**" />
+    <Compile Remove="LBATextDump\**" />
+    <EmbeddedResource Remove="JSON\**" />
+    <EmbeddedResource Remove="LBA1TextDump\**" />
+    <EmbeddedResource Remove="LBA2TextDump\**" />
+    <EmbeddedResource Remove="LBATextDump\**" />
+    <None Remove="JSON\**" />
+    <None Remove="LBA1TextDump\**" />
+    <None Remove="LBA2TextDump\**" />
+    <None Remove="LBATextDump\**" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Shrug.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="files\cleansedData.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="JSON\LBA1\ru-RU.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="JSON\LBA2\ru-RU.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
